@@ -1,0 +1,5 @@
+-   id: flutter-test
+    name: Test Flutter Code
+    entry: run
+    language: script
+    files: \.dart$
