@@ -1,4 +1,18 @@
 #!/usr/bin/env bash
 
-flutter test
+if [ $# -eq 0 ]; then
+    flutter test
+else
+  rootPath=$(pwd)
+  
+  for path in "$@"; do
+    cd "$path" || exit
+
+    if ! flutter test; then
+      exit $?
+    fi
+
+    cd "$rootPath" || exit
+  done
+fi
 
