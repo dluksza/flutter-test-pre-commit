@@ -2,4 +2,5 @@
     name: Test Flutter Code
     entry: run
     language: script
+    pass_filenames: false
     files: \.dart$
